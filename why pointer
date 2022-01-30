@@ -1,0 +1,61 @@
+#include <iostream>
+
+using namespace std;
+class Employee
+{
+	private :
+		string name;
+		int salary;
+		
+	public:
+		Employee()
+		{
+			this->name = "bilgi yok ";
+			this->salary=0;
+		}
+		// constructor class ismi ile birebir aynı yazılmalı
+		Employee(string name,int salary)
+		{
+			this->name=name;
+			this->salary=salary;
+		}
+		
+		void setSalary(int maas)
+		{
+			salary = maas;
+		}
+		int getSalary()
+		{
+			return salary;
+		}
+	
+		void setName(string isim){
+			name = isim;
+		}
+		string getName(){
+			return name;
+		}
+		void showInfos()
+		{
+			cout << "isim : " << name << endl;
+			cout << "maas : " << salary << endl;
+		}
+		
+};
+
+void deneme(Employee* ptr){
+	/* pointer kullanmamızın sebebi sadece pointer için bellekte yer ayırarak 
+	daha az yer ayırdık yani sadece pointera yer ayırdık
+	*/
+}
+
+int main() {
+	
+	Employee employee("elif emre",3000);
+	
+	
+	deneme(&employee);
+	
+	
+	return 0;
+}
