@@ -1,0 +1,58 @@
+#include <iostream>
+
+using namespace std;
+class Employee
+{
+	private :
+		string name;
+		int salary;
+		
+	public:
+		Employee()
+		{
+			this->name = "bilgi yok ";
+			this->salary=0;
+		}
+		// constructor class ismi ile birebir aynı yazılmalı
+		Employee(string name,int salary)
+		{
+			this->name=name;
+			this->salary=salary;
+		}
+		
+		void setSalary(int maas)
+		{
+			salary = maas;
+		}
+		int getSalary()
+		{
+			return salary;
+		}
+	
+		void setName(string isim){
+			name = isim;
+		}
+		string getName(){
+			return name;
+		}
+		void showInfos()
+		{
+			cout << "isim : " << name << endl;
+			cout << "maas : " << salary << endl;
+		}
+		
+};
+
+int main() {
+	
+	Employee employee1("elif emre",3000);
+	Employee employee3;
+	employee1.showInfos();
+	employee3.showInfos();
+	
+	
+
+	
+	
+	return 0;
+}
