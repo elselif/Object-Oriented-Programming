@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+
+class Point
+{
+    public: // for them to be visible
+    int x,y;
+};
+
+
+int main()
+{
+    Point a;
+    a.x = 0;
+    a.y = 5;
+
+    cout << a.x << "," << a.y << endl;
+}
